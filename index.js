@@ -8,6 +8,10 @@ helloService.get({uri:`/api/hello`, f: (request, response) => {
  response.sendJson({message: "Hello 🌍"})
 }})
 
+helloService.get({uri:`/api/yo`, f: (request, response) => {
+ response.sendJson({message: "👋 yo 🌍"})
+}})
+
 helloService.start({port: port}, res => {
  res.when({
    Failure: error => console.log("😡 Houston? We have a problem!"),
